@@ -30,6 +30,8 @@ This Python project automates the process of scraping news articles, generating 
 - **`io_files/`**: Directory for input and output files used during processing.
 - **`requirements.txt`**: Lists all Python dependencies required for the project.
 
+You need to include an .env file with all necessary API keys and credential for HuggingFace, Twilio and GCS.
+
 ## Contributing
 
 Contributions are welcome! Please follow these steps:
