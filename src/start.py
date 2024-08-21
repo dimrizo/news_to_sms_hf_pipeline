@@ -45,6 +45,7 @@ def rest_after_action():
     logging.debug("Woke up from sleep.")
 
 def main():
+    # we include here a list of free-to-scrape sources, but ideally real news article could be used
     urls = [
         ('http://quotes.toscrape.com/author/Albert-Einstein/', 'test'),
         ('http://quotes.toscrape.com/author/J-K-Rowling/', 'test'),
@@ -55,7 +56,6 @@ def main():
         ('http://quotes.toscrape.com/author/Eleanor-Roosevelt/', 'test'),
         ('http://quotes.toscrape.com/author/Elie-Wiesel/', 'test'),
         ('http://quotes.toscrape.com/author/Douglas-Adams/', 'test'),
-        ('http://quotes.toscrape.com/author/Dr-Seuss/', 'test'),
     ]
 
     news_articles = scrapper.scrape_news(urls)
@@ -77,6 +77,7 @@ def main():
     summary = hf_summarize.bart_large_cnn(article_title + ". " + article_text)
     rest_after_action()
 
+    # Printing out some info for debugging purposes
     print("Selected_article and url:")
     print(selected_article)
     print(article_url)
